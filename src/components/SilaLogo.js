@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -12,78 +13,80 @@ const SilaLogo = ({ size = 56, className = "" }) => (
         className={`sila-logo ${className}`}
         style={{ display: 'block' }}
         whileHover={{ scale: 1.1 }}
-        transition={{
-            scale: {
-                duration: 0.3
-            }
-        }}
+        transition={{ duration: 0.3 }}
     >
-        {/* Arka plan gradyanı */}
         <defs>
             <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#4B3F9F" /> {/* Daha koyu mor */}
-                <stop offset="100%" stopColor="#5D4294" /> {/* Daha koyu mor-mavi */}
+                <stop offset="0%" stopColor="#6C63FF" />
+                <stop offset="100%" stopColor="#845EF7" />
             </linearGradient>
-            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <filter id="glow">
                 <feGaussianBlur stdDeviation="2" result="blur" />
                 <feComposite in="SourceGraphic" in2="blur" operator="over" />
             </filter>
         </defs>
 
-        {/* Ana daire */}
         <motion.circle
             cx="28"
             cy="28"
             r="26"
-            fill="url(#logoGradient)"
-            stroke="#ffffff"
-            strokeWidth="1"
-            whileHover={{ fill: "#5D4294" }}
-            filter="url(#glow)"
+            fill="#2A2A2A"
+            stroke="url(#logoGradient)"
+            strokeWidth="2"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
         />
 
-        {/* İç daire detayı */}
-        <circle cx="28" cy="28" r="22" fill="none" stroke="#ffffff" strokeWidth="0.5" strokeOpacity="0.6" />
+        <motion.circle
+            cx="28"
+            cy="28"
+            r="22"
+            stroke="rgba(108, 99, 255, 0.3)"
+            strokeWidth="1"
+            strokeDasharray="4 4"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
 
-        {/* Logo metni - biraz aşağı indirdim */}
         <motion.text
             x="50%"
-            y="58%"
+            y="55%"
             textAnchor="middle"
             fill="#fff"
-            fontSize="2.2rem"
+            fontSize="24"
             fontWeight="bold"
             fontFamily="Arial, sans-serif"
-            dy=".1em"
-            whileHover={{ scale: 1.1 }}
-            style={{ textShadow: "0px 0px 3px rgba(255, 255, 255, 0.5)" }}
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            style={{ letterSpacing: "1px" }}
         >
             SI
         </motion.text>
 
-        {/* Dekoratif detaylar */}
-        <path
-            d="M28 16 L28 40"
-            stroke="#ffffff"
-            strokeWidth="1.5"
+        <motion.path
+            d="M28 18 L28 38"
+            stroke="url(#logoGradient)"
+            strokeWidth="2"
             strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 0.8 }}
         />
-        <path
-            d="M8 28 L14 28"
-            stroke="#ffffff"
-            strokeWidth="1.5"
+
+        <motion.path
+            d="M18 28 L38 28"
+            stroke="url(#logoGradient)"
+            strokeWidth="2"
             strokeLinecap="round"
-        />
-        <path
-            d="M42 28 L48 28"
-            stroke="#ffffff"
-            strokeWidth="1.5"
-            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
         />
     </motion.svg>
 );
-
-export default SilaLogo;
 
 const LogoComponent = ({ closeMenu }) => (
     <motion.div
@@ -96,4 +99,5 @@ const LogoComponent = ({ closeMenu }) => (
     </motion.div>
 );
 
+export default SilaLogo;
 export { LogoComponent };
