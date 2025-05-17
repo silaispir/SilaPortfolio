@@ -154,7 +154,7 @@ const Portfolio = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    Projelerim
+                    Neler Yaptım
                 </motion.h1>
 
                 <motion.div

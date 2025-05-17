@@ -1,10 +1,23 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaXTwitter, FaFacebookF, FaEnvelope, FaPhone, FaLocationDot } from 'react-icons/fa6';
+import { FaEnvelope, FaPhone, FaLocationDot } from 'react-icons/fa6';
 import './Footer.css';
 
 const Footer = () => {
+    const handleLinkClick = (e, path) => {
+        e.preventDefault();
+        // Sayfayı yavaşça yukarı kaydıry
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Belirli bir süre beklemeden sayfayı aç
+        setTimeout(() => {
+            // İlgili sayfayı aç
+            window.history.pushState({}, '', path);
+            // Sayfada yönlendirme işlemi gerçekleştir
+            window.dispatchEvent(new Event('popstate'));
+        }, 500);
+    };
+
     return (
         <footer className="footer">
             <div className="container">
@@ -12,23 +25,20 @@ const Footer = () => {
                     <div className="footer-about">
                         <h2 className="footer-logo">Sıla İspir</h2>
                         <p>
-                            Bilgisayar Mühendisliği öğrencisi. Web geliştirme ve yazılım mühendisliği 
-                            alanlarında kendimi geliştiriyorum. Yenilikçi ve kullanıcı dostu 
+                            Bilgisayar Mühendisliği öğrencisi. Web geliştirme ve yazılım mühendisliği
+                            alanlarında kendimi geliştiriyorum. Yenilikçi ve kullanıcı dostu
                             uygulamalar geliştirmek için çalışıyorum.
                         </p>
-                        <div className="social-icons">
-                            {/* Sosyal medya linkleri */}
-                        </div>
                     </div>
 
                     <div className="footer-links">
                         <h3>Hızlı Bağlantılar</h3>
                         <ul>
-                            <li><Link to="/">Ana Sayfa</Link></li>
-                            <li><Link to="/about">Hakkımda</Link></li>
-                            <li><Link to="/skills">Yetenekler</Link></li>
-                            <li><Link to="/portfolio">Portfolyo</Link></li>
-                            <li><Link to="/contact">İletişim</Link></li>
+                            <li><Link to="/" onClick={(e) => handleLinkClick(e, '/')}>Ana Sayfa</Link></li>
+                            <li><Link to="/about" onClick={(e) => handleLinkClick(e, '/about')}>Hakkımda</Link></li>
+                            <li><Link to="/skills" onClick={(e) => handleLinkClick(e, '/skills')}>Yetenekler</Link></li>
+                            <li><Link to="/portfolio" onClick={(e) => handleLinkClick(e, '/portfolio')}>Portfolyo</Link></li>
+                            <li><Link to="/contact" onClick={(e) => handleLinkClick(e, '/contact')}>İletişim</Link></li>
                         </ul>
                     </div>
 
@@ -60,7 +70,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-

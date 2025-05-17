@@ -171,7 +171,7 @@ const Skills = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    Yeteneklerim
+                    Neler Yapabilirim
                 </motion.h1>
 
                 <motion.div

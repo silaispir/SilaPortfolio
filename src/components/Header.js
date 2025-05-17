@@ -63,7 +63,7 @@ const Header = () => {
                                         isActive ? "active" : ""
                                     }
                                 >
-                                    Hakkımda
+                                    Ben Kimim?
                                 </NavLink>
                             </li>
                             <li className="nav-item">

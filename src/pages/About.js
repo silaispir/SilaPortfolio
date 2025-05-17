@@ -12,7 +12,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Hakkımda
+          Ben Kimim?
         </motion.h2>
 
         <div className="about-content">
