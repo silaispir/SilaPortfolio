@@ -62,7 +62,7 @@
 
 .home-title,
 .hero-title {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
@@ -70,14 +70,14 @@
 }
 
 .home-subtitle {
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   color: var(--primary-color);
   margin-bottom: 25px;
   font-weight: 600;
 }
 
 .home-description {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   margin-bottom: 40px;
   max-width: 650px;
