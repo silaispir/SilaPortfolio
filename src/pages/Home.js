@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import SilaLogo from '../components/SilaLogo';
 import './Home.css';
 
 const Home = () => {
