@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaLocationDot, FaXTwitter, FaGithub, FaFacebookF } from 'react-icons/fa6';
+import { FaEnvelope, FaPhone, FaLocationDot, FaXTwitter, FaGithub, FaFacebookF, FaLinkedinIn } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 import './Contact.css';
 
@@ -261,7 +261,7 @@ const Contact = () => {
                             </div>
                             <div className="info-content">
                                 <h3>E-posta</h3>
-                                <p>silaispir9505@gmail.com</p>
+                                <p><a href="mailto:silaispir9505@gmail.com">silaispir9505@gmail.com</a></p>
                             </div>
                         </motion.div>
 
@@ -317,6 +317,16 @@ const Contact = () => {
                                     whileTap={{ scale: 0.9 }}
                                 >
                                     <FaFacebookF />
+                                </motion.a>
+                                <motion.a
+                                    href="https://www.linkedin.com/in/sıla-ispir-638526329/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="LinkedIn"
+                                    whileHover={{ y: -5, scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                >
+                                    <FaLinkedinIn />
                                 </motion.a>
                             </div>
                         </motion.div>
