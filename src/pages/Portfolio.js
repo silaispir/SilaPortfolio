@@ -96,7 +96,7 @@ const Portfolio = () => {
         {
             id: 4,
             title: "OpenCV Color Detection",
-            category: "desktop",
+            category: "design",
             description:
                 "OpenCV kullanarak gerçek zamanlı renk tespiti yapan uygulama.",
             tags: ["Python", "OpenCV", "Computer Vision"],
