@@ -28,9 +28,9 @@ const Home = () => {
             </motion.h1>
             <h2 className="home-subtitle">Bilgisayar Mühendisliği Öğrencisi</h2>
             <p className="home-description">
-              Python, Java, C# ve JavaScript dillerinde programlama yapabilen, 
-              web geliştirme, makine öğrenmesi ve görüntü işleme konularında 
-              deneyim sahibi bir bilgisayar mühendisliği öğrencisiyim.
+                Teknolojiye olan ilgim ve üretme tutkumla yazılım dünyasında kendime güçlü bir yol çizmeye çalışıyorum.
+                Yeni şeyler öğrenmek, problemleri yaratıcı çözümlerle aşmak ve sürekli gelişmek benim hem hedefim
+                hem de motivasyon kaynağım.
             </p>
             <div className="home-buttons">
               <Link to="/portfolio" className="btn">Projelerim</Link>
