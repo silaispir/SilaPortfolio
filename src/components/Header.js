@@ -75,7 +75,7 @@ const Header = () => {
                                         isActive ? "active" : ""
                                     }
                                 >
-                                    Yetenekler
+                                    Neler Yapabilirim
                                 </NavLink>
                             </li>
                             <li className="nav-item">

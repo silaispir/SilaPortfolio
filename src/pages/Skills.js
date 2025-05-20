@@ -71,23 +71,6 @@ const Skills = () => {
             ],
         },
         {
-            title: "Veri Yapıları ve Algoritmalar",
-            skills: [
-                {
-                    name: "Veri Yapıları",
-                    level: 60,
-                    description:
-                        "Bağlı listeler, yığınlar, kuyruklar, ağaçlar, graf yapıları",
-                },
-                {
-                    name: "Algoritmalar",
-                    level: 65,
-                    description:
-                        "Arama, sıralama algoritmaları, zaman/mekan karmaşıklığı analizi",
-                },
-            ],
-        },
-        {
             title: "Nesne Tabanlı Programlama",
             skills: [
                 {

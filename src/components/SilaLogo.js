@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -18,18 +17,17 @@ const SilaLogo = ({ size = 56, className = "" }) => (
         <defs>
             <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#6C63FF" />
-                <stop offset="100%" stopColor="#845EF7" />
+                <stop offset="50%" stopColor="#845EC2" />
+                <stop offset="100%" stopColor="#FF4D6D" />
             </linearGradient>
-            <filter id="glow">
-                <feGaussianBlur stdDeviation="2" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-            </filter>
         </defs>
 
-        <motion.circle
-            cx="28"
-            cy="28"
-            r="26"
+        <motion.rect
+            x="4"
+            y="4"
+            width="48"
+            height="48"
+            rx="12"
             fill="#2A2A2A"
             stroke="url(#logoGradient)"
             strokeWidth="2"
@@ -38,53 +36,25 @@ const SilaLogo = ({ size = 56, className = "" }) => (
             transition={{ duration: 0.5 }}
         />
 
-        <motion.circle
-            cx="28"
-            cy="28"
-            r="22"
-            stroke="rgba(108, 99, 255, 0.3)"
-            strokeWidth="1"
-            strokeDasharray="4 4"
-            initial={{ rotate: 0 }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-
         <motion.text
             x="50%"
             y="55%"
-            textAnchor="middle"
-            fill="#fff"
-            fontSize="24"
-            fontWeight="bold"
-            fontFamily="Arial, sans-serif"
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            dominantBaseline="middle"  // Bu satırı ekledik
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            style={{ letterSpacing: "1px" }}
+            textAnchor="middle"
         >
-            SI
+            <tspan
+                fill="url(#logoGradient)"
+                fontSize="32"
+                fontWeight="bold"
+                fontFamily="Arial, sans-serif"
+                letterSpacing="0"
+            >
+                SI
+            </tspan>
         </motion.text>
-
-        <motion.path
-            d="M28 18 L28 38"
-            stroke="url(#logoGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 0.8 }}
-        />
-
-        <motion.path
-            d="M18 28 L38 28"
-            stroke="url(#logoGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-        />
     </motion.svg>
 );
 

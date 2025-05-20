@@ -78,9 +78,28 @@
 }
 
 .detail-info {
-  display: block;
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+}
+
+.cv-download {
+  margin-top: 30px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
 }
 
 @media (max-width: 768px) {
